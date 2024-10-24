@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição - H.A.E</title>
+    <link rel="stylesheet" href="../css/forms.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Formulário de Inscrição - H.A.E.</h1>
+        
+        <form>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="matricula">Número de Matrícula:</label>
+            <input type="text" id="matricula" name="matricula" required>
+
+            <label for="contrato">Contrato de Trabalho:</label>
+            <select id="contrato" name="contrato" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="indeterminado">Prazo Indeterminado</option>
+                <option value="determinado">Prazo Determinado</option>
+            </select>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="atividade">Atividade de H.A.E:</label>
+            <select id="atividade" name="atividade" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="estagio_supervisionado">Estágio Supervisionado</option>
+                <option value="trabalho_graduacao">Trabalho de Graduação</option>
+                <option value="iniciacao_cientifica">Iniciação Científica</option>
+                <option value="divulgacao_cursos">Divulgação dos Cursos</option>
+                <option value="administracao_academica">Administração Acadêmica</option>
+                <option value="enade">Preparação para ENADE</option>
+            </select>
+
+            <label for="horario_inicio">Disponibilidade de Horário (início):</label>
+            <input type="time" id="horario_inicio" name="horario_inicio" required>
+            <label for="horario_fim">até:</label>
+            <input type="time" id="horario_fim" name="horario_fim" required>
+
+            <label for="projeto">Descrição do Projeto:</label>
+            <textarea id="projeto" name="projeto" rows="5" placeholder="Descreva as metas do projeto..." required></textarea>
+
+            <label class="checkbox">
+                <br>
+                Confirmo que li as obrigações para as H.A.E.
+                <input type="checkbox" name="aceitar_regras" required> 
+            </label>
+            <br>
+
+            <label for="proposta">Anexar Proposta de Projeto (PDF):</label>
+            <input type="file" id="proposta" name="proposta" accept=".pdf" required>
+
+            <label class="checkbox">
+                <br>
+                Aceito os termos e condições.
+                <input type="checkbox" name="aceitar_termos" required> 
+            </label>
+
+            <button type="submit" class="submit-btn">Enviar Inscrição</button>
+        </form>
+    </div>
+
+</body>
+</html>
