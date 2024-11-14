@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatec-Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="pages/dashboard.html" method="post">
+            <label for="username">Nome de Usuário:</label>
+            <input type="text" id="username" name="username" required placeholder="Digite seu usuário">
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required placeholder="Digite sua senha">
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Lembrar-me</label>
+            </div>
+            <input type="submit" value="Entrar">
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="img/logos_cps_gov.jpg" alt="Imagem final do formulário" style="max-width: 50%; height: auto;">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
