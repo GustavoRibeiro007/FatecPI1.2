@@ -11,6 +11,7 @@
     text-align: center;
 
 }
+
 .styled-table2 {
     width: 100%;
     border-collapse: collapse;
@@ -36,24 +37,25 @@
 
 .styled-table tbody tr {
     border-bottom: 5px solid #dddddd;
-   
+
 }
 
 .styled-table tbody tr:last-of-type {
     border-bottom: 6px solid #9e0000;
-  
+
 }
+
 .botao {
-    display: inline-block;      /* Permite definir altura e largura */
-    padding: 10px 20px;         /* Espaço interno (margem interna) */
-    background-color: #9e0000;      /* Cor de fundo */
-    color: white;               /* Cor do texto */
-    text-decoration: none;      /* Remove o sublinhado do link */
-    border-radius: 5px;         /* Arredonda os cantos */
-    font-weight: bold;          /* Deixa o texto em negrito */
-    text-align: center;         /* Centraliza o texto */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #9e0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .botao:hover {
-background-color: rgb(92, 0, 0);  /* Cor ao passar o mouse */
+    background-color: rgb(92, 0, 0);
 }
