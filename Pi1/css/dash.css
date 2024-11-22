@@ -1,0 +1,3 @@
+.admin-section, .professor-section {
+    display: none;  /* vai esconder as seções */
+}

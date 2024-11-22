@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Cabeçalho</title>
+  <style>
+    /* Estilo Geral */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filter {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .filter label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .filter input, .filter select {
+            width: 100%; /* Ajuste para ocupar todo o espaço disponível da coluna */
+            height: 40px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            color: #333;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .pagination button.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .pagination button:hover {
+            background-color: #e0e0e0;
+        }
+    /* Barra superior com o logo e ícones de redes sociais */
+    .header-top {
+      background-color: #000;
+      padding: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top img {
+      height: 50px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    /* Barra de Navegação */
+    .navbar {
+      background-color: #a80606;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      background-color: #8B0000;
+      border-radius: 5px;
+    }
+
+    /* Estilo para os contêineres de cards */
+    .container2 {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container3 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      width: 200px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      height: 320px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 75%;
+      border-radius: 5px;
+    }
+
+    .card-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+
+    .card-description {
+      font-size: 20px;
+      margin: 15px 0;
+      color: #555;
+    }
+
+    .card-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .section-title {
+            font-size: 35px;
+            color: #0d5273;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Linha vermelha embaixo do título */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #b20000;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        
+  </style>
+</head>
+<body>
+  <!-- Barra com o logo da Fatec e CPS -->
+  <div style="text-align:left; margin-top: 30px; margin: 30px; width: 1000px;">
+    <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/53/2024/03/logo-fatec_itapira.png" alt="Imagem final do formulário" style="max-width: 35%; height: auto;">
+  </div>
+
+  <!-- Barra de Navegação e Busca -->
+  <div class="navbar">
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20professor/telaprincipal.html">Home</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/listanormaldiretor.html">Inscrições</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/telaedital.html">Acompanhamento</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/telaedital.html">Relatório</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20professor/telaedital.html">Edital</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20professor/telaloginprof.html">Sair</a>
+  </div>
+<br>
+<div class="container">
+        <div class="section-title">Acompanhamento</div>
+    <div class="filters">
+        <div class="filter">
+            <label for="unid">Unidade:</label>
+            <select name="unidade" id="unid">
+                <option value="disabled selected">Selecione...</option>
+                <option value="unidade_americana">Americana</option>
+                <option value="unidade_araras">Araras</option>
+                <option value="unidade_campinas">Campinas</option>
+                <option value="unidade_itapira">Itapira</option>
+                <option value="unidade_mogi_mirim">Mogi Mirim</option>
+                <option value="unidade_santo_andre">Santo André</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="tip">Tipo HAE</label>
+            <select name="tipo" id="tip">
+                <option value="disabled selected">Selecione...</option>
+                <option value="estagio_supervisionado">Estágio Supervisionado</option>
+                <option value="trabalho_graduacao">Trabalho de Graduação</option>
+                <option value="iniciacao_cientifica">Iniciação Científica</option>
+                <option value="divulgacao_cursos">Divulgação dos Cursos</option>
+                <option value="administracao_academica">Administração Acadêmica</option>
+                <option value="enade">Preparação para ENADE</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="numero">Número de inscrição</label>
+            <input type="text" id="numero" placeholder="Digite o número de inscrição">
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Unidade</th>
+                <th>Nº inscrição</th>
+                <th>Tipo HAE</th>
+                <th>Professor</th>
+                <th>Número da Matrícula</th>
+                <th>Situação</th> <!-- Nova coluna adicionada -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Itapira</td>
+                <td>001</td>
+                <td>Estágio Supervisionado</td>
+                <td>Prof. João Silva</td>
+                <td>12345</td>
+                <td>Aprovado</td> <!-- Valor da nova coluna -->
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>002</td>
+                <td>Trabalho de Graduação</td>
+                <td>Prof. Maria Souza</td>
+                <td>23456</td>
+                <td>Em análise</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>003</td>
+                <td>Preparação para ENADE</td>
+                <td>Prof. Carlos Lima</td>
+                <td>34567</td>
+                <td>Deferido</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>004</td>
+                <td>Divulgação dos Cursos</td>
+                <td>Prof. Douglas Rosário</td>
+                <td>34587</td>
+                <td>Aprovado</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>005</td>
+                <td>Administração Acadêmica</td>
+                <td>Prof. José Junior</td>
+                <td>25567</td>
+                <td>Aprovado parcial</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>006</td>
+                <td>Iniciação Científica</td>
+                <td>Prof. João Lucas</td>
+                <td>34877</td>
+                <td>Deferido</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>007</td>
+                <td>Iniciação Científica</td>
+                <td>Prof. Gabriel Faria</td>
+                <td>30167</td>
+                <td>Em análise</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>008</td>
+                <td>Administração Acadêmica</td>
+                <td>Prof. Ana Carolina</td>
+                <td>14581</td>
+                <td>Aprovado</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>009</td>
+                <td>Iniciação Científica</td>
+                <td>Prof. Maria de Fátima</td>
+                <td>87567</td>
+                <td>Aprovado parcial</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>010</td>
+                <td>Trabalho de Graduação</td>
+                <td>Prof. Carla Godoi</td>
+                <td>57419</td>
+                <td>Deferido</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pagination">
+        <button>«</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>...</button>
+        <button>50</button>
+        <button>»</button>
+    </div>
+</div>
+ 
+  <!-- Barra preta -->
+  <div class="container2">
+    <a href="https://www.saopaulo.sp.gov.br/">
+      <img src="https://fatecitapira.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/logo-rodape-governo-do-estado-sp.png" alt="Imagem Centralizada" class="centralizada">
+    </a>
+  </div>
+
+</body>
+</html>

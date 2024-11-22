@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Cabeçalho</title>
+  <style>
+    /* Estilo Geral */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Barra superior com o logo e ícones de redes sociais */
+    .header-top {
+      background-color: #000;
+      padding: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-top img {
+      height: 50px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-icons a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    
+    /* Barra de Navegação */
+    .navbar {
+      background-color: #a80606;
+      padding: 10px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      background-color: #8B0000;
+      border-radius: 5px;
+    }
+
+    /* Estilo para os contêineres de cards */
+    .container2 {
+      width: 100%;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .container3 {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      width: 200px;
+      cursor: pointer;
+      text-decoration: none;
+      color: black;
+      height: 320px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 75%;
+      border-radius: 5px;
+    }
+
+    .card-title {
+      font-size: 25px;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+
+    .card-description {
+      font-size: 20px;
+      margin: 15px 0;
+      color: #555;
+    }
+
+    .card-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+    .section-title {
+            font-size: 35px;
+            color: #0d5273;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Linha vermelha embaixo do título */
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 5px;
+            background-color: #b20000;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        
+  </style>
+</head>
+<body>
+  <!-- Barra com o logo da Fatec e CPS -->
+  <div style="text-align:left; margin-top: 30px; margin: 30px; width: 1000px;">
+    <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/53/2024/03/logo-fatec_itapira.png" alt="Imagem final do formulário" style="max-width: 35%; height: auto;">
+  </div>
+
+  <!-- Barra de Navegação e Busca -->
+  <div class="navbar">
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/telaoficial.html">Home</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/listanormaldiretor.html">Inscrições</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/telaedital.html">Edital</a>
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20professor/telaloginprof.html">Sair</a>
+  </div>
+<br>
+    <div class="container">
+      <div class="section-title">Bem vindo, Coordenador(a)!</div>
+    <div class="container3">
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/listanormaldiretor.html" class="card">
+      <img src="https://cdn.icon-icons.com/icons2/816/PNG/512/identification_icon-icons.com_66294.png" alt="inscritos">
+      <div class="card-title">Inscritos</div>
+      <div class="card-description">Verificar a lista de inscritos</div>
+    </a>
+
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/telaprovacao.html" class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3361/3361983.png" alt="aprovado">
+      <div class="card-title">Aprovação</div>
+      <div class="card-description">Analise e aprove as inscrição aqui</div>
+    </a>
+
+    <a href="file:///C:/Users/pc/Documents/Am%C3%A1bile/Pi%20pronto%20diretor/telaedital.html" class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1647/1647909.png" alt="edital">
+      <div class="card-title">Edital</div>
+      <div class="card-description">Acompanhe a lista de inscrições aprovadas e deferidas</div>
+    </a>
+  </div>
+
+  <!-- Barra preta -->
+  <div class="container2">
+    <a href="https://www.saopaulo.sp.gov.br/">
+      <img src="https://fatecitapira.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/logo-rodape-governo-do-estado-sp.png" alt="Imagem Centralizada" class="centralizada">
+    </a>
+  </div>
+
+</body>
+</html>
