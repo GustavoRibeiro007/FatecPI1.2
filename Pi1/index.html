@@ -3,32 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatec - Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Login - Fatec</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>Login</h2>
+<div class="container" id="container">
+
+    <div class="form-container sign-in">
         <form id="loginForm" onsubmit="validateLogin(event)">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
-
-            <label for="password">Senha:</label>
-            <input type="password" id="password" name="password" required placeholder="Digite sua senha">
-
-            <div class="checkbox-container">
-                <input type="checkbox" id="remember" name="remember">
-                <label for="remember">Lembrar-me</label>
-            </div>
-            <input type="submit" value="Entrar">
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="img/logos_cps_gov.jpg" alt="Imagem final do formulário" style="max-width: 50%; height: auto;">
-            </div>
+            <h1>Entrar - Login</h1>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
         </form>
     </div>
 
-    <script src="js/login.js"></script>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-right">
+                <h1>Seja bem-vindo!</h1>
+                <p>Faça o login aqui😊</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer">
+    <a href="https://www.saopaulo.sp.gov.br/">
+        <img src="https://fatecitapira.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/logo-rodape-governo-do-estado-sp.png" alt="Logo Governo do Estado de SP">
+    </a>
+</footer>
+
+
+<script src="js/login.js"></script>
 
 </body>
 </html>

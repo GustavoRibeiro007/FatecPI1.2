@@ -6,10 +6,10 @@ function validateLogin(event) {
 
     // Definindo as credenciais para os usuários
     const users = [
-        { email: 'ronaldo@gmail.com', password: 'senha123', userType: 'admin' },
-        { email: 'marta@gmail.com', password: 'senha123', userType: 'professor', professorData: { 
-            nome: 'Marta Silva',
-            email: 'marta@gmail.com',
+        { email: 'marcia@gmail.com', password: 'senha123', userType: 'admin' },
+        { email: 'junior@gmail.com', password: 'senha123', userType: 'professor', professorData: { 
+            nome: 'José Gonçalves Pinto Junior',
+            email: 'junior@gmail.com',
             tipoContrato: 'estagio_supervisionado',
             rg: '123456789',
             contato: '987654321',

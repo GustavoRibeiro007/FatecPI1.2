@@ -1,10 +1,18 @@
 .main-footer {
-    background-color: #000;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .main-footer img {
-    max-width: 200px;
-  }
-  
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 25px; /* Margem de 10px para distanciar do conteúdo acima */
+  width: 100%; /* Garantir que o footer ocupe toda a largura da tela */
+  position: fixed; /* Fixar o footer na parte inferior da tela */
+  bottom: 0; /* Fixar o rodapé na parte inferior */
+  left: 0; /* Garantir que ele ocupe toda a largura da tela */
+  z-index: 1000; /* Garantir que o footer fique acima de outros elementos */
+}
+
+.main-footer img {
+  max-width: 200px;
+  width: 100%; /* Ajustar a imagem para preencher a largura disponível */
+  max-width: 200px; /* Garantir que a imagem tenha um tamanho máximo */
+  height: auto; /* Manter a proporção da imagem */
+}
