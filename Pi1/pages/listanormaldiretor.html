@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barra de Cabeçalho</title>
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/telas.css">
+
+</head>
+<header class="main-header">
+    <div class="logo">
+      <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/53/2024/03/logo-fatec_itapira.png" alt="Logo Fatec Itapira">
+    </div>
+  </header>
+
+      <div class="navbar">
+        <a href="../pages/dashboard.html">Menu</a>
+        <a href="../pages/edital.html">Edital</a>
+        <a href="/login.html">Sair</a>
+    </div>
+<body>
+
+  <div class="container">
+    <div class="section-title">Inscrições</div>
+    <div class="filters">
+        <div class="filter">
+            <label for="unid">Unidade:</label>
+            <select name="unidade" id="unid">
+                <option value="disabled selected">Selecione...</option>
+                <option value="unidade_americana">Americana</option>
+                <option value="unidade_araras">Araras</option>
+                <option value="unidade_campinas">Campinas</option>
+                <option value="unidade_itapira">Itapira</option>
+                <option value="unidade_mogi_mirim">Mogi Mirim</option>
+                <option value="unidade_santo_andre">Santo André</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="tip">Tipo HAE</label>
+            <select name="tipo" id="tip">
+                <option value="disabled selected">Selecione...</option>
+                <option value="estagio_supervisionado">Estágio Supervisionado</option>
+                <option value="trabalho_graduacao">Trabalho de Graduação</option>
+                <option value="iniciacao_cientifica">Iniciação Científica</option>
+                <option value="divulgacao_cursos">Divulgação dos Cursos</option>
+                <option value="administracao_academica">Administração Acadêmica</option>
+                <option value="enade">Preparação para ENADE</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="numero">Número de inscrição</label>
+            <input type="text" id="numero" placeholder="Digite o número de inscrição">
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Unidade</th>
+                <th>Nº inscrição</th>
+                <th>Tipo HAE</th>
+                <th>Professor</th>
+                <th>Número da Matrícula</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Itapira</td>
+                <td>001</td>
+                <td>Estágio Supervisionado</td>
+                <td>Prof. João Silva</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>002</td>
+                <td>Trabalho de Graduação</td>
+                <td>Prof. Maria Souza</td>
+                <td>23456</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>003</td>
+                <td>Preparação para ENADE</td>
+                <td>Prof. Carlos Lima</td>
+                <td>34567</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>004</td>
+                <td>Divulgação dos Cursos</td>
+                <td>Prof. Douglas Rosário</td>
+                <td>34587</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>005</td>
+                <td>Administração Acadêmica</td>
+                <td>Prof. José Junior</td>
+                <td>25567</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>006</td>
+                <td>Iniciação Científica</td>
+                <td>Prof. João Lucas</td>
+                <td>34877</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>007</td>
+                <td>Iniciação Científica</td>
+                <td>Prof. Gabriel Faria</td>
+                <td>30167</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>008</td>
+                <td>Administração Acadêmica</td>
+                <td>Prof. Ana Carolina</td>
+                <td>14581</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>009</td>
+                <td>Iniciação Científica</td>
+                <td>Prof. Maria de Fátima</td>
+                <td>87567</td>
+            </tr>
+            <tr>
+                <td>Itapira</td>
+                <td>010</td>
+                <td>Trabalho de Graduação</td>
+                <td>Prof. Carla Godoi</td>
+                <td>57419</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="pagination">
+        <button>«</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>...</button>
+        <button>50</button>
+        <button>»</button>
+    </div>
+</div>
+<footer class="main-footer">
+    <a href="https://www.saopaulo.sp.gov.br/">
+      <img src="https://fatecitapira.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/logo-rodape-governo-do-estado-sp.png" alt="Logo Governo do Estado de SP">
+    </a>
+  </footer>
+</body>
+</html>
