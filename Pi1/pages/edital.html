@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,79 +9,83 @@
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
 </head>
+
 <body>
-  <header class="main-header">
-    <div class="logo">
-      <img src="https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/53/2024/03/logo-fatec_itapira.png" alt="Logo Fatec Itapira">
-    </div>
-  </header>
 
-  <nav class="navbar">
-    <a href="./dashboard.html">Home</a>
-    <a href="./acomp.html">Acompanhamento</a>
-    <a href="./edital.html">Edital</a>
-    <a href="../index.html">Sair</a>
-  </nav>
+  <div class="coord-section" style="display: none;">
+    <header class="main-header">
+      <div class="logo">
+        <img src="../img/logo-fatec_itapira.png" alt="Logo Fatec Itapira">
+      </div>
+    </header>
 
-  <div class="container">
-    <div class="section-title">Edital</div>
-    <div class="filters">
-      <div class="filter">
-        <label for="unid">Unidade:</label>
-        <select name="unidade" id="unid">
-          <option value="disabled selected">Selecione...</option>
-          <option value="unidade_americana">Americana</option>
-          <option value="unidade_araras">Araras</option>
-          <option value="unidade_campinas">Campinas</option>
-          <option value="unidade_itapira">Itapira</option>
-          <option value="unidade_mogi_mirim">Mogi Mirim</option>
-          <option value="unidade_santo_andre">Santo André</option>
-        </select>
-      </div>
-      <div class="filter">
-        <label for="tip">Tipo HAE</label>
-        <select name="tipo" id="tip">
-          <option value="disabled selected">Selecione...</option>
-          <option value="estagio_supervisionado">Estágio Supervisionado</option>
-          <option value="trabalho_graduacao">Trabalho de Graduação</option>
-          <option value="iniciacao_cientifica">Iniciação Científica</option>
-          <option value="divulgacao_cursos">Divulgação dos Cursos</option>
-          <option value="administracao_academica">Administração Acadêmica</option>
-          <option value="enade">Preparação para ENADE</option>
-        </select>
-      </div>
-      <div class="filter">
-        <label for="numero">Número de inscrição</label>
-        <input type="text" id="numero" placeholder="Digite o número de inscrição">
-      </div>
-      <div class="filter">
-        <label for="ano">Ano</label>
-        <input type="text" id="ano" placeholder="Digite o ano">
-      </div>
+    <div class="navbar">
+      <a href="dashboard.html">Menu</a>
+      <a href="edital.html">Edital</a>
+      <a href="listaDiretor.html">Inscrições</a>
+      <a href="aprov.html">Aprovar</a>
+      <a href="../index.html">Sair</a>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Unidade</th>
-          <th>Nº inscrição</th>
-          <th>Tipo HAE</th>
-          <th>Professor</th>
-          <th>Número da Matrícula</th>
-          <th>Situação</th>
-          <th>Ano</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
+
+    <div class="container">
+      <div class="section-title">Edital</div>
+      <div class="filters">
+        <div class="filter">
+          <label for="unid">Unidade:</label>
+          <select name="unidade" id="unid">
+            <option value="disabled selected">Selecione...</option>
+            <option value="unidade_americana">Americana</option>
+            <option value="unidade_araras">Araras</option>
+            <option value="unidade_campinas">Campinas</option>
+            <option value="unidade_itapira">Itapira</option>
+            <option value="unidade_mogi_mirim">Mogi Mirim</option>
+            <option value="unidade_santo_andre">Santo André</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="tip">Tipo HAE</label>
+          <select name="tipo" id="tip">
+            <option value="disabled selected">Selecione...</option>
+            <option value="estagio_supervisionado">Estágio Supervisionado</option>
+            <option value="trabalho_graduacao">Trabalho de Graduação</option>
+            <option value="iniciacao_cientifica">Iniciação Científica</option>
+            <option value="divulgacao_cursos">Divulgação dos Cursos</option>
+            <option value="administracao_academica">Administração Acadêmica</option>
+            <option value="enade">Preparação para ENADE</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="numero">Número de inscrição</label>
+          <input type="text" id="numero" placeholder="Digite o número de inscrição">
+        </div>
+        <div class="filter">
+          <label for="ano">Ano</label>
+          <input type="text" id="ano" placeholder="Digite o ano">
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Unidade</th>
+            <th>Nº inscrição</th>
+            <th>Tipo HAE</th>
+            <th>Professor</th>
+            <th>Número da Matrícula</th>
+            <th>Situação</th>
+            <th>Ano</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td>Itapira</td>
             <td>001</td>
             <td>Estágio Supervisionado</td>
             <td>Prof. José Junior</td>
             <td>12345</td>
-            <td>Aprovado</td> 
+            <td>Aprovado</td>
             <td>2024</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Itapira</td>
             <td>002</td>
             <td>Trabalho de Graduação</td>
@@ -88,8 +93,8 @@
             <td>23456</td>
             <td>Aprovado</td>
             <td>2024</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Itapira</td>
             <td>003</td>
             <td>Preparação para ENADE</td>
@@ -97,9 +102,9 @@
             <td>34567</td>
             <td>Deferido</td>
             <td>2024</td>
-        </tr>
-        <tr>
-        <tr>
+          </tr>
+          <tr>
+          <tr>
             <td>Itapira</td>
             <td>002</td>
             <td>Trabalho de Graduação</td>
@@ -107,8 +112,8 @@
             <td>23456</td>
             <td>Aprovado</td>
             <td>2024</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Itapira</td>
             <td>003</td>
             <td>Preparação para ENADE</td>
@@ -116,8 +121,8 @@
             <td>34567</td>
             <td>Deferido</td>
             <td>2024</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Itapira</td>
             <td>004</td>
             <td>Divulgação dos Cursos</td>
@@ -125,8 +130,8 @@
             <td>34587</td>
             <td>Aprovado</td>
             <td>2024</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>Itapira</td>
             <td>006</td>
             <td>Iniciação Científica</td>
@@ -134,15 +139,153 @@
             <td>34877</td>
             <td>Deferido</td>
             <td>2024</td>
-        </tr>
-      </tbody>
-    </table>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="professor-section" style="display: none;">
+    <header class="main-header">
+      <div class="logo">
+        <img src="../img/logo-fatec_itapira.png" alt="Logo Fatec Itapira">
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <a href="dashboard.html">Menu</a>
+      <a href="acomp.html">Acompanhamento</a>
+      <a href="edital.html">Edital</a>
+      <a href="../index.html">Sair</a>
+    </nav>
+
+    <div class="container">
+      <div class="section-title">Edital</div>
+      <div class="filters">
+        <div class="filter">
+          <label for="unid">Unidade:</label>
+          <select name="unidade" id="unid">
+            <option value="disabled selected">Selecione...</option>
+            <option value="unidade_americana">Americana</option>
+            <option value="unidade_araras">Araras</option>
+            <option value="unidade_campinas">Campinas</option>
+            <option value="unidade_itapira">Itapira</option>
+            <option value="unidade_mogi_mirim">Mogi Mirim</option>
+            <option value="unidade_santo_andre">Santo André</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="tip">Tipo HAE</label>
+          <select name="tipo" id="tip">
+            <option value="disabled selected">Selecione...</option>
+            <option value="estagio_supervisionado">Estágio Supervisionado</option>
+            <option value="trabalho_graduacao">Trabalho de Graduação</option>
+            <option value="iniciacao_cientifica">Iniciação Científica</option>
+            <option value="divulgacao_cursos">Divulgação dos Cursos</option>
+            <option value="administracao_academica">Administração Acadêmica</option>
+            <option value="enade">Preparação para ENADE</option>
+          </select>
+        </div>
+        <div class="filter">
+          <label for="numero">Número de inscrição</label>
+          <input type="text" id="numero" placeholder="Digite o número de inscrição">
+        </div>
+        <div class="filter">
+          <label for="ano">Ano</label>
+          <input type="text" id="ano" placeholder="Digite o ano">
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Unidade</th>
+            <th>Nº inscrição</th>
+            <th>Tipo HAE</th>
+            <th>Professor</th>
+            <th>Número da Matrícula</th>
+            <th>Situação</th>
+            <th>Ano</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Itapira</td>
+            <td>001</td>
+            <td>Estágio Supervisionado</td>
+            <td>Prof. José Junior</td>
+            <td>12345</td>
+            <td>Aprovado</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Itapira</td>
+            <td>002</td>
+            <td>Trabalho de Graduação</td>
+            <td>Prof. Maria Souza</td>
+            <td>23456</td>
+            <td>Aprovado</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Itapira</td>
+            <td>003</td>
+            <td>Preparação para ENADE</td>
+            <td>Prof. Carlos Lima</td>
+            <td>34567</td>
+            <td>Deferido</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+          <tr>
+            <td>Itapira</td>
+            <td>002</td>
+            <td>Trabalho de Graduação</td>
+            <td>Prof. Maria Souza</td>
+            <td>23456</td>
+            <td>Aprovado</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Itapira</td>
+            <td>003</td>
+            <td>Preparação para ENADE</td>
+            <td>Prof. Carlos Lima</td>
+            <td>34567</td>
+            <td>Deferido</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Itapira</td>
+            <td>004</td>
+            <td>Divulgação dos Cursos</td>
+            <td>Prof. Douglas Rosário</td>
+            <td>34587</td>
+            <td>Aprovado</td>
+            <td>2024</td>
+          </tr>
+          <tr>
+            <td>Itapira</td>
+            <td>006</td>
+            <td>Iniciação Científica</td>
+            <td>Prof. João Lucas</td>
+            <td>34877</td>
+            <td>Deferido</td>
+            <td>2024</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
 
   <footer class="main-footer">
     <a href="https://www.saopaulo.sp.gov.br/">
-      <img src="https://fatecitapira.cps.sp.gov.br/wp-content/themes/tema-cps/images/sao-paulo/logo-rodape-governo-do-estado-sp.png" alt="Logo Governo do Estado de SP">
+      <img src="../img/logo-rodape-governo-do-estado-sp.png" alt="Logo Governo do Estado de SP">
     </a>
   </footer>
+
+  <script src="../js/validacao.js"></script>
+
 </body>
+
 </html>

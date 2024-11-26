@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de inscrição</title>
     <link rel="stylesheet" href="../css/forms.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
     <div class="container">
-        <form action="sucess.html">
+        <form>
             <table class="styled-table">
                 <thead>
                     <tr>
@@ -24,13 +25,12 @@
                     <tr>
                         <td>
                             <label for="nome">Professor(a):</label>
-                            <input type="text" id="nome" name="nome" value="" readonly><br>
+                            <input type="text" id="nome" name="nome" value="José Gonçalves Pinto Junior" readonly><br>
                             <label for="email">E-mail:</label>
-                            <input type="text" id="email" name="email" value="" readonly>
+                            <input type="text" id="email" name="email" value="junior@gmail.com" readonly>
                             <label for="tip">Contrato de Trabalho</label>
                             <select name="tipo-contrato" id="tipo-contrato" disabled>
-                                <option value="disabled selected">Selecione...</option>
-                                <option value="estagio_supervisionado">Estágio Supervisionado</option>
+                                <option value="estagio_supervisionado" selected>Estágio Supervisionado</option>
                                 <option value="trabalho_graduacao">Trabalho de Graduação</option>
                                 <option value="iniciacao_cientifica">Iniciação Científica</option>
                                 <option value="divulgacao_cursos">Divulgação dos Cursos</option>
@@ -40,18 +40,18 @@
                         </td>
                         <td>
                             <label for="rg">RG:</label>
-                            <input type="number" id="rg" name="rg" value="" readonly><br>
+                            <input type="number" id="rg" name="rg" value="123456789" readonly><br>
                             <label for="contato">Contato</label>
-                            <input type="number" id="contato" name="contato" value="" readonly>
+                            <input type="number" id="contato" name="contato" value="987654321" readonly>
                             <label for="matricula">Nº Matrícula</label>
-                            <input type="number" id="matricula" name="matricula" value="" readonly>
+                            <input type="number" id="matricula" name="matricula" value="20230001" readonly>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <label>Possui aula em outra Fatec?</label>
                             <div class="radio-container">
-                                <input type="radio" id="sim" name="aula_fatec" value="sim">
+                                <input type="radio" id="sim" name="aula_fatec" value="sim" checked>
                                 <label for="sim" class="radio-label">Sim</label>
                             </div>
                             <div class="radio-container">
@@ -59,14 +59,12 @@
                                 <label for="nao" class="radio-label">Não</label>
                             </div>
                             <div class="form-group">
-                                <label for="horas">Horas semanais disponíveis (FATEC DE ITAPIRA "OGARI DE CASTRO
-                                    PACHECO"):</label>
-                                <input type="time" id="horas" name="horas" required>
+                                <label for="horas">Horas semanais disponíveis (FATEC DE ITAPIRA "OGARI DE CASTRO PACHECO"):</label>
+                                <input type="time" id="horas" name="horas" value="08:00" required readonly>
                             </div>
                             <label for="tip">Tipo da HAE:</label>
-                            <select name="tipo" id="tip">
-                                <option value="disabled selected">Selecione...</option>
-                                <option value="estagio_supervisionado">Estágio Supervisionado</option>
+                            <select name="tipo" id="tip" disabled>
+                                <option value="estagio_supervisionado" selected>Estágio Supervisionado</option>
                                 <option value="trabalho_graduacao">Trabalho de Graduação</option>
                                 <option value="iniciacao_cientifica">Iniciação Científica</option>
                                 <option value="divulgacao_cursos">Divulgação dos Cursos</option>
@@ -74,42 +72,35 @@
                                 <option value="enade">Preparação para ENADE</option>
                             </select>
                             <label for="quantidade">Quantidade de H.A.E.S solicitadas inciso de I à IV:</label>
-                            <input type="number" id="quantidade" name="quantidade"
-                                placeholder="Digite a quantidade de H.A.E.S..." required><br>
+                            <input type="number" id="quantidade" name="quantidade" value="5" required readonly><br>
                             <label for="unidade">Projeto de Interesse da Unidade:</label>
-                            <input type="text" id="unidade" name="unidade"
-                                placeholder="Digite o projeto de interesse da unidade..."><br>
+                            <input type="text" id="unidade" name="unidade" value="Desenvolvimento de Software para Gestão Acadêmica" readonly><br>
                             <label for="titulo">Título do projeto de interesse conforme Edital:</label>
-                            <input type="text" id="titulo" name="titulo"
-                                placeholder="Título do projeto de interesse conforme Edital..."><br>
+                            <input type="text" id="titulo" name="titulo" value="Sistema de Gestão de Documentos Acadêmicos" readonly><br>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <label for="TituloP">Título do seu projeto:</label>
-                            <input type="text" id="TituloP" name="TituloP"
-                                placeholder="Digite o título do seu projeto..."><br>
+                            <input type="text" id="TituloP" name="TituloP" value="Sistema de Gestão de Processos Acadêmicos" readonly><br>
                             <div class="form-group">
                                 <label for="descricao">Descrição do projeto:</label>
-                                <textarea id="descricao" name="descricao"
-                                    placeholder="Descreva as metas do seu projeto..."></textarea>
+                                <textarea id="descricao" name="descricao" readonly>O projeto visa a criação de um sistema web para gestão de documentos acadêmicos, como justificativas, aprovações e registros de aulas, otimizando a comunicação entre professores e coordenadores.</textarea>
                             </div>
                             <label for="proposta">Anexar Proposta de Projeto (PDF):</label>
-                            <input type="file" id="proposta" name="proposta" accept=".pdf">
+                            <input type="file" id="proposta" name="proposta" accept=".pdf" disabled>
                             <label class="checkbox">
                                 <br>
-                                <input type="checkbox" name="aceitar_regras" required>
+                                <input type="checkbox" name="aceitar_regras" checked disabled>
                                 Confirmo que li as obrigações para as H.A.E.
                             </label>
                             <label class="checkbox">
                                 <br>
-                                <input type="checkbox" name="aceitar_termos" required>
+                                <input type="checkbox" name="aceitar_termos" checked disabled>
                                 Aceito os termos e condições.
-                            </label> <br>
-                            <button type="submit" class="submit-btn">Enviar Inscrição</button>
+                            </label><br>                    
                             <div style="text-align: center; margin-top: 20px;">
-                                <img src="../img/logos_cps_gov.jpg" alt="Imagem final do formulário"
-                                    style="max-width: 35%; height: auto;">
+                                <img src="../img/logos_cps_gov.jpg" alt="Imagem final do formulário" style="max-width: 35%; height: auto;">
                             </div>
                         </td>
                     </tr>
@@ -117,7 +108,6 @@
             </table>
         </form>
     </div>
-    <script src="../js/dados.js"></script>
 
 </body>
 

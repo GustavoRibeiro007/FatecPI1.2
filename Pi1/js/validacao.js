@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Verifica se o tipo de usuário existe e é válido
     if (userType === 'admin') {
-        document.querySelector('.admin-section').style.display = 'block';  
+        document.querySelector('.coord-section').style.display = 'block';  
     } else if (userType === 'professor') {
         document.querySelector('.professor-section').style.display = 'block';  
     } else {
