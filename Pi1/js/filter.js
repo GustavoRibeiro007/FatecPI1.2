@@ -1,30 +1,26 @@
+function filterTable() {
+  // Obtém os valores dos filtros
+  const tipoFilter = document.getElementById('tip').value.toLowerCase().trim(); // Pega o valor do filtro "Tipo HAE"
+  const numeroFilter = document.getElementById('numero').value.toLowerCase().trim(); // Pega o valor do filtro "Número de inscrição"
 
-    document.getElementById('unid').addEventListener('change', filterTable);
-    document.getElementById('tip').addEventListener('change', filterTable);
-    document.getElementById('numero').addEventListener('input', filterTable);
-    document.getElementById('ano').addEventListener('input', filterTable);
+  // Obtém todas as linhas da tabela (exceto o cabeçalho)
+  const rows = document.querySelectorAll('table tbody tr');
 
-    function filterTable() {
-      const unidadeFilter = document.getElementById('unid').value.toLowerCase();
-      const tipoFilter = document.getElementById('tip').value.toLowerCase();
-      const numeroFilter = document.getElementById('numero').value.toLowerCase();
-      const anoFilter = document.getElementById('ano').value.toLowerCase();
+  // Itera sobre cada linha da tabela
+  rows.forEach(row => {
+    // Acessa as células relevantes da linha
+    const tipoText = row.cells[2].textContent.toLowerCase().trim(); // Tipo HAE (índice 2)
+    const numeroText = row.cells[1].textContent.toLowerCase().trim(); // Número de Inscrição (índice 1)
 
-      const rows = document.querySelectorAll('#table tbody tr');
-      
-      rows.forEach(row => {
-        const unidade = row.cells[0].textContent.toLowerCase();
-        const tipo = row.cells[2].textContent.toLowerCase();
-        const numero = row.cells[1].textContent.toLowerCase();
-        const ano = row.cells[6].textContent.toLowerCase();
+    // Verifica se a linha corresponde aos filtros
+    const tipoMatch = tipoFilter === 'selecione...' || tipoText.includes(tipoFilter);
+    const numeroMatch = numeroFilter === '' || numeroText.includes(numeroFilter);
 
-        const matches = (
-          (unidadeFilter === '' || unidade.includes(unidadeFilter)) &&
-          (tipoFilter === '' || tipo.includes(tipoFilter)) &&
-          (numeroFilter === '' || numero.includes(numeroFilter)) &&
-          (anoFilter === '' || ano.includes(anoFilter))
-        );
-
-        row.style.display = matches ? '' : 'none';
-      });
+    // Exibe ou oculta a linha dependendo da correspondência com os filtros
+    if (tipoMatch && numeroMatch) {
+      row.style.display = '';  // Exibe a linha
+    } else {
+      row.style.display = 'none';  // Oculta a linha
     }
+  });
+}

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/telas.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/modal.css">
 </head>
 
 <body>
@@ -56,7 +57,7 @@
                         </a>
                     </td>
                     <td>
-                        <button class="btn-approve" onclick="approveStatus('001')">Aprovar</button>
+                        <button class="btn-approve" onclick="openApprovalModal('001')">Aprovar</button>
                     </td>
                     <td>
                         <button class="btn-reject" onclick="rejectStatus('001')">Reprovar</button>
@@ -64,6 +65,32 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- Modal para aprovar -->
+        <div id="approvalModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Selecione a opção de aprovação</h2>
+                <form id="approvalForm">
+                    <label>
+                        <input type="radio" name="approvalType" value="total" checked> Aprovar Totalmente
+                    </label><br>
+                    <label>
+                        <input type="radio" name="approvalType" value="partial"> Aprovar Parcialmente
+                    </label><br><br>
+
+                    <!-- Seção de horas (inicialmente oculta) -->
+                    <div id="partialHoursSection" style="display: none;">
+                        <label for="hours">Quantidade de horas:</label>
+                        <input type="number" id="hours" name="hours" min="1" max="100"
+                            placeholder="Digite as horas"><br>
+                    </div><br>
+                    <button type="button" class="btn-confirm" onclick="submitApproval()">Confirmar</button>
+                </form>
+            </div>
+        </div>
+
+
 
         <footer class="main-footer">
             <a href="https://www.saopaulo.sp.gov.br/">
@@ -73,7 +100,6 @@
     </div>
 
     <script src="../js/aprov.js"></script>
-
 </body>
 
 </html>

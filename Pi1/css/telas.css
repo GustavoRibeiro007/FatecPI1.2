@@ -162,4 +162,40 @@ body {
 button:hover {
     opacity: 0.9;
 }
-  
+
+/* Acompanhamento Section */
+.acomp {
+  margin-top: 20px; /* Optional, space between other content and table */
+}
+
+.acomp table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.acomp tbody {
+  margin-bottom: 15px; /* Add space between each tbody */
+}
+
+.acomp th,
+.acomp td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.acomp th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.acomp tr:hover {
+  background-color: #f9f9f9;
+}
+
+.acomp td {
+  font-size: 14px;
+}
+
+

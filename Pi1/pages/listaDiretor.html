@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barra de Cabeçalho</title>
+  <title>Incritos - Fatec</title>
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/telas.css">
@@ -29,20 +29,8 @@
     <div class="section-title">Inscrições</div>
     <div class="filters">
         <div class="filter">
-            <label for="unid">Unidade:</label>
-            <select name="unidade" id="unid">
-                <option value="disabled selected">Selecione...</option>
-                <option value="unidade_americana">Americana</option>
-                <option value="unidade_araras">Araras</option>
-                <option value="unidade_campinas">Campinas</option>
-                <option value="unidade_itapira">Itapira</option>
-                <option value="unidade_mogi_mirim">Mogi Mirim</option>
-                <option value="unidade_santo_andre">Santo André</option>
-            </select>
-        </div>
-        <div class="filter">
             <label for="tip">Tipo HAE</label>
-            <select name="tipo" id="tip">
+            <select name="tipo" id="tip" onchange="filterTable()">
                 <option value="disabled selected">Selecione...</option>
                 <option value="estagio_supervisionado">Estágio Supervisionado</option>
                 <option value="trabalho_graduacao">Trabalho de Graduação</option>
@@ -54,7 +42,7 @@
         </div>
         <div class="filter">
             <label for="numero">Número de inscrição</label>
-            <input type="text" id="numero" placeholder="Digite o número de inscrição">
+            <input type="text" id="numero" placeholder="Digite o número de inscrição" oninput="filterTable()">
         </div>
     </div>
     <table>
@@ -126,5 +114,6 @@
         <img src="../img/logo-rodape-governo-do-estado-sp.png" alt="">
     </a>
   </footer>
+  <script src="../js/filter.js"></script>
 </body>
 </html>

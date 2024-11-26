@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Barra de Cabeçalho</title>
+  <title>Edital - Fatec</title>
   <link rel="stylesheet" href="../css/telas.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
@@ -31,37 +31,22 @@
       <div class="section-title">Edital</div>
       <div class="filters">
         <div class="filter">
-          <label for="unid">Unidade:</label>
-          <select name="unidade" id="unid">
-            <option value="disabled selected">Selecione...</option>
-            <option value="unidade_americana">Americana</option>
-            <option value="unidade_araras">Araras</option>
-            <option value="unidade_campinas">Campinas</option>
-            <option value="unidade_itapira">Itapira</option>
-            <option value="unidade_mogi_mirim">Mogi Mirim</option>
-            <option value="unidade_santo_andre">Santo André</option>
-          </select>
+            <label for="tip">Tipo HAE</label>
+            <select name="tipo" id="tip" onchange="filterTable()">
+                <option value="disabled selected">Selecione...</option>
+                <option value="estagio_supervisionado">Estágio Supervisionado</option>
+                <option value="trabalho_graduacao">Trabalho de Graduação</option>
+                <option value="iniciacao_cientifica">Iniciação Científica</option>
+                <option value="divulgacao_cursos">Divulgação dos Cursos</option>
+                <option value="administracao_academica">Administração Acadêmica</option>
+                <option value="enade">Preparação para ENADE</option>
+            </select>
         </div>
         <div class="filter">
-          <label for="tip">Tipo HAE</label>
-          <select name="tipo" id="tip">
-            <option value="disabled selected">Selecione...</option>
-            <option value="estagio_supervisionado">Estágio Supervisionado</option>
-            <option value="trabalho_graduacao">Trabalho de Graduação</option>
-            <option value="iniciacao_cientifica">Iniciação Científica</option>
-            <option value="divulgacao_cursos">Divulgação dos Cursos</option>
-            <option value="administracao_academica">Administração Acadêmica</option>
-            <option value="enade">Preparação para ENADE</option>
-          </select>
+            <label for="numero">Número de inscrição</label>
+            <input type="text" id="numero" placeholder="Digite o número de inscrição" oninput="filterTable()">
         </div>
-        <div class="filter">
-          <label for="numero">Número de inscrição</label>
-          <input type="text" id="numero" placeholder="Digite o número de inscrição">
-        </div>
-        <div class="filter">
-          <label for="ano">Ano</label>
-          <input type="text" id="ano" placeholder="Digite o ano">
-        </div>
+    </div>
       </div>
       <table>
         <thead>
@@ -163,37 +148,23 @@
       <div class="section-title">Edital</div>
       <div class="filters">
         <div class="filter">
-          <label for="unid">Unidade:</label>
-          <select name="unidade" id="unid">
-            <option value="disabled selected">Selecione...</option>
-            <option value="unidade_americana">Americana</option>
-            <option value="unidade_araras">Araras</option>
-            <option value="unidade_campinas">Campinas</option>
-            <option value="unidade_itapira">Itapira</option>
-            <option value="unidade_mogi_mirim">Mogi Mirim</option>
-            <option value="unidade_santo_andre">Santo André</option>
-          </select>
+            <label for="tip">Tipo HAE</label>
+            <select name="tipo" id="tip" onchange="filterTable()">
+                <option value="disabled selected">Selecione...</option>
+                <option value="estagio_supervisionado">Estágio Supervisionado</option>
+                <option value="trabalho_graduacao">Trabalho de Graduação</option>
+                <option value="iniciacao_cientifica">Iniciação Científica</option>
+                <option value="divulgacao_cursos">Divulgação dos Cursos</option>
+                <option value="administracao_academica">Administração Acadêmica</option>
+                <option value="enade">Preparação para ENADE</option>
+            </select>
         </div>
         <div class="filter">
-          <label for="tip">Tipo HAE</label>
-          <select name="tipo" id="tip">
-            <option value="disabled selected">Selecione...</option>
-            <option value="estagio_supervisionado">Estágio Supervisionado</option>
-            <option value="trabalho_graduacao">Trabalho de Graduação</option>
-            <option value="iniciacao_cientifica">Iniciação Científica</option>
-            <option value="divulgacao_cursos">Divulgação dos Cursos</option>
-            <option value="administracao_academica">Administração Acadêmica</option>
-            <option value="enade">Preparação para ENADE</option>
-          </select>
+            <label for="numero">Número de inscrição</label>
+            <input type="text" id="numero" placeholder="Digite o número de inscrição" oninput="filterTable()">
         </div>
-        <div class="filter">
-          <label for="numero">Número de inscrição</label>
-          <input type="text" id="numero" placeholder="Digite o número de inscrição">
-        </div>
-        <div class="filter">
-          <label for="ano">Ano</label>
-          <input type="text" id="ano" placeholder="Digite o ano">
-        </div>
+    </div>
+
       </div>
       <table>
         <thead>
