@@ -1,1 +1,1 @@
-# FatecPI1.2
+Projeto Front-end de um sistema de HAE (Horas-Atividade Específicas), com o objetivo de facilitar a inscrição e envio de projetos dos professores à instituição 'Centro Paula Souza', de forma eficaz e intuitiva, levando como principal ponto a experiência do usuário.
